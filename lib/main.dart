@@ -1,3 +1,4 @@
+import 'package:find_my_dog/languages/Strings.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -25,12 +26,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  void _incrementCounter() {
-    setState(() {
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,21 +33,21 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            TextField(
+              decoration: InputDecoration(
+                border: InputBorder.none,
+                hintText: Strings.of(context).email
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            TextField(
+              decoration: InputDecoration(
+                  border: InputBorder.none,
+                  hintText: Strings.of(context).password
+              ),
+            )
           ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
+        )
+      )
     );
   }
 }
