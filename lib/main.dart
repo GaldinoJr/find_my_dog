@@ -31,15 +31,16 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         body:
         Container(
-            color: Colors.blue,
+            color: Colors.deepPurple,
             child:
             Column(
               children: [
                 Container(
-                  alignment: Alignment.topLeft,
+                  alignment: Alignment.centerLeft,
                   margin: new EdgeInsets.only(
                       top: 25.0
                   ),
+                  height: 150,
                   color: Colors.white,
                   child: FlutterLogo(
                     size: 60.0,
@@ -52,15 +53,22 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 300,
                       height: 500,
                       color: Colors.cyan,
+                      padding: new EdgeInsets.only(
+                        top: 50,
+                        left: 25
+                      ),
                       child: Column(
                         children: <Widget>[
-                          Text(
-                            Strings.of(context).login,
-                            style: TextStyle(
-                                fontSize: 32.0,
-                                color: Colors.white),
-                          ),
+                          Align(
+                            alignment: Alignment.topLeft,
+                            child: Text(
+                              Strings.of(context).login,
+                              style: TextStyle(
+                                  fontSize: 32.0,
+                                  color: Colors.white),
 
+                            )
+                          ),
                           TextField(
                             decoration: InputDecoration(
                                 border: InputBorder.none,
