@@ -29,10 +29,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:
-      Container(
-        color: Colors.blue,
-        child:
+        body:
+        Container(
+            color: Colors.blue,
+            child:
             Column(
               children: [
                 Container(
@@ -46,35 +46,38 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
 
-                Container(
-                    width: 300.0,
-                    color: Colors.cyan,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: <Widget>[
-                        Text(
+                Align(
+                  alignment: Alignment.topRight,
+                  child: Container(
+                      width: 300,
+                      height: 500,
+                      color: Colors.cyan,
+                      child: Column(
+                        children: <Widget>[
+                          Text(
                             Strings.of(context).login,
                             style: TextStyle(
                                 fontSize: 32.0,
                                 color: Colors.white),
-                        ),
-
-                        TextField(
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: Strings.of(context).email
                           ),
-                        ),
 
-                        TextField(
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: Strings.of(context).password
+                          TextField(
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: Strings.of(context).email
+                            ),
                           ),
-                        )
-                      ],
-                    )
-                ),
+
+                          TextField(
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: Strings.of(context).password
+                            ),
+                          )
+                        ],
+                      )
+                  ),
+                )
               ],
             )
         )
