@@ -29,25 +29,55 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            TextField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: Strings.of(context).email
-              ),
-            ),
-            TextField(
-              decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: Strings.of(context).password
-              ),
+      body:
+      Container(
+        color: Colors.blue,
+        child:
+            Column(
+              children: [
+                Container(
+                  alignment: Alignment.topLeft,
+                  margin: new EdgeInsets.only(
+                      top: 25.0
+                  ),
+                  color: Colors.white,
+                  child: FlutterLogo(
+                    size: 60.0,
+                  ),
+                ),
+
+                Container(
+                    width: 300.0,
+                    color: Colors.cyan,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        Text(
+                            Strings.of(context).login,
+                            style: TextStyle(
+                                fontSize: 32.0,
+                                color: Colors.white),
+                        ),
+
+                        TextField(
+                          decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: Strings.of(context).email
+                          ),
+                        ),
+
+                        TextField(
+                          decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: Strings.of(context).password
+                          ),
+                        )
+                      ],
+                    )
+                ),
+              ],
             )
-          ],
         )
-      )
     );
   }
 }
