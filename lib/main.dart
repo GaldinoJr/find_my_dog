@@ -52,27 +52,34 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 300,
                       height: 500,
                       padding: new EdgeInsets.only(
-                        top: 50,
-                        left: 25
+                          top: 50,
+                          left: 25
                       ),
                       decoration: new BoxDecoration(
                           color: Colors.cyan,
                           borderRadius: new BorderRadius.only(
                             topLeft: const Radius.circular(40),
                             bottomLeft: const Radius.circular(40),
-                          )
+                          ),
+                          boxShadow: <BoxShadow>[
+                            new BoxShadow(
+                              color: Colors.black38,
+                              blurRadius: 40.0,
+                              offset: new Offset(0.0, 10.0),
+                            ),
+                          ]
                       ),
                       child: Column(
                         children: <Widget>[
                           Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              Strings.of(context).login,
-                              style: TextStyle(
-                                  fontSize: 32.0,
-                                  color: Colors.white),
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                Strings.of(context).login,
+                                style: TextStyle(
+                                    fontSize: 32.0,
+                                    color: Colors.white),
 
-                            )
+                              )
                           ),
                           TextField(
                             decoration: InputDecoration(
