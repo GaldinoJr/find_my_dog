@@ -49,58 +49,119 @@ class _MyHomePageState extends State<MyHomePage> {
                 Align(
                   alignment: Alignment.topRight,
                   child: Container(
-                      width: 300,
-                      height: 500,
-                      padding: new EdgeInsets.only(
-                          top: 50,
-                          left: 25
-                      ),
-                      decoration: new BoxDecoration(
-                          color: Colors.cyan,
-                          borderRadius: new BorderRadius.only(
-                            topLeft: const Radius.circular(40),
-                            bottomLeft: const Radius.circular(40),
+                    width: 300,
+                    height: 500,
+                    padding: new EdgeInsets.only(
+                        top: 50,
+                        left: 25,
+                        right: 25
+                    ),
+                    decoration: new BoxDecoration(
+                        color: Colors.cyan,
+                        borderRadius: new BorderRadius.only(
+                          topLeft: const Radius.circular(40),
+                          bottomLeft: const Radius.circular(40),
+                        ),
+                        boxShadow: <BoxShadow>[
+                          new BoxShadow(
+                            color: Colors.black38,
+                            blurRadius: 40.0,
+                            offset: new Offset(0.0, 10.0),
                           ),
-                          boxShadow: <BoxShadow>[
-                            new BoxShadow(
-                              color: Colors.black38,
-                              blurRadius: 40.0,
-                              offset: new Offset(0.0, 10.0),
-                            ),
-                          ]
-                      ),
-                      child: Column(
-                        children: <Widget>[
-                          Align(
-                              alignment: Alignment.topLeft,
-                              child: Text(
-                                Strings.of(context).login,
-                                style: TextStyle(
-                                    fontSize: 32.0,
-                                    color: Colors.white),
-
-                              )
-                          ),
-                          TextField(
-                            decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: Strings.of(context).email
-                            ),
-                          ),
-
-                          TextField(
-                            decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: Strings.of(context).password
-                            ),
-                          )
-                        ],
-                      )
+                        ]
+                    ),
+                    child: viewLogin(),
                   ),
                 )
               ],
             )
         )
+    );
+  }
+
+  viewLogin() {
+    return Column(
+        children: <Widget>[
+          Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                Strings.of(context).login,
+                style: TextStyle(
+                    fontSize: 32.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w300),
+
+              )
+          ),
+
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Container(
+                margin: EdgeInsets.only(top: 20),
+                child: Text(
+                  Strings.of(context).email,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                )),
+          ),
+          Container(
+              decoration: BoxDecoration(
+                  color: Colors.cyanAccent,
+                  borderRadius: BorderRadius.all(Radius.circular(8))
+              ),
+              margin: EdgeInsets.only(top: 10),
+              padding: EdgeInsets.only(left: 18),
+              child: TextField(
+                style: new TextStyle(
+                    color: Colors.white
+                ),
+                decoration: InputDecoration(
+                    hintText: Strings.of(context).email,
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(
+                      color: Colors.blueGrey,
+                    )
+                ),
+              )
+          ),
+
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Container(
+                margin: EdgeInsets.only(top: 20),
+                child: Text(
+                  Strings.of(context).password,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                )),
+          ),
+
+          Container(
+              decoration: BoxDecoration(
+                  color: Colors.cyanAccent,
+                  borderRadius: BorderRadius.all(Radius.circular(8))
+              ),
+              margin: EdgeInsets.only(
+                  top: 10
+              ),
+              padding: EdgeInsets.only(left: 18),
+              child:
+              TextField(
+                style: new TextStyle(
+                    color: Colors.white
+                ),
+                decoration: InputDecoration(
+                    hintText: Strings.of(context).password,
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(
+                      color: Colors.blueGrey,
+                    )
+                ),
+              )
+          )
+        ]
     );
   }
 }
