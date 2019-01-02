@@ -46,16 +46,21 @@ class _MyHomePageState extends State<MyHomePage> {
                     size: 60.0,
                   ),
                 ),
-
                 Align(
                   alignment: Alignment.topRight,
                   child: Container(
                       width: 300,
                       height: 500,
-                      color: Colors.cyan,
                       padding: new EdgeInsets.only(
                         top: 50,
                         left: 25
+                      ),
+                      decoration: new BoxDecoration(
+                          color: Colors.cyan,
+                          borderRadius: new BorderRadius.only(
+                            topLeft: const Radius.circular(40),
+                            bottomLeft: const Radius.circular(40),
+                          )
                       ),
                       child: Column(
                         children: <Widget>[
