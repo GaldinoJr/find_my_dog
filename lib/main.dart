@@ -102,6 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Strings.of(context).email,
                   style: TextStyle(
                     color: Colors.white,
+                    fontWeight: FontWeight.w300
                   ),
                 )),
           ),
@@ -117,7 +118,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.white
                 ),
                 decoration: InputDecoration(
-                    hintText: Strings.of(context).email,
                     border: InputBorder.none,
                     hintStyle: TextStyle(
                       color: Colors.blueGrey,
@@ -134,6 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Strings.of(context).password,
                   style: TextStyle(
                     color: Colors.white,
+                      fontWeight: FontWeight.w300
                   ),
                 )),
           ),
@@ -153,7 +154,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.white
                 ),
                 decoration: InputDecoration(
-                    hintText: Strings.of(context).password,
                     border: InputBorder.none,
                     hintStyle: TextStyle(
                       color: Colors.blueGrey,
