@@ -1,5 +1,6 @@
 import 'package:find_my_dog/languages/Strings.dart';
 import 'package:flutter/material.dart';
+import 'package:find_my_dog/icons/custom_icons.dart';
 
 void main() => runApp(MyApp());
 
@@ -85,19 +86,19 @@ class _MyHomePageState extends State<MyHomePage> {
                           left: 180,
                           bottom: 76,
                           child: Container(
-                              child: new RaisedButton
-                                (
+                            child: new RaisedButton
+                              (
                                 onPressed: onLoginClicked,
                                 child: Text(
                                   Strings.of(context).login,
                                   style: TextStyle(
-                                    fontWeight: FontWeight.w900
+                                      fontWeight: FontWeight.w900
                                   ),
                                 ),
                                 textColor: Colors.deepPurple,
                                 color: Colors.white,
                                 shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0))
-                              ),
+                            ),
                           )
                       )
                     ]
@@ -127,12 +128,22 @@ class _MyHomePageState extends State<MyHomePage> {
             alignment: Alignment.centerLeft,
             child: Container(
                 margin: EdgeInsets.only(top: 20),
-                child: Text(
-                  Strings.of(context).email,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w300
-                  ),
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        Strings.of(context).email,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w300
+                        ),
+                      ),
+                      Icon(
+                        MyCustomIcons.mail,
+                        color: Colors.white,
+                      )
+
+                    ]
                 )),
           ),
           Container(
@@ -159,13 +170,23 @@ class _MyHomePageState extends State<MyHomePage> {
             alignment: Alignment.centerLeft,
             child: Container(
                 margin: EdgeInsets.only(top: 20),
-                child: Text(
-                  Strings.of(context).password,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w300
-                  ),
-                )),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        Strings.of(context).password,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w300
+                        ),
+                      ),
+                      Icon(
+                        MyCustomIcons.key,
+                        color: Colors.white,
+                      )
+                    ]
+                )
+            ),
           ),
 
           Container(
