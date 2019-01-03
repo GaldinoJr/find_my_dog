@@ -88,7 +88,12 @@ class _MyHomePageState extends State<MyHomePage> {
                               child: new RaisedButton
                                 (
                                 onPressed: onLoginClicked,
-                                child: Text(Strings.of(context).login),
+                                child: Text(
+                                  Strings.of(context).login,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w900
+                                  ),
+                                ),
                                 textColor: Colors.deepPurple,
                                 color: Colors.white,
                                 shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0))
