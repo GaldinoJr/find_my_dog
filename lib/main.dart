@@ -41,68 +41,65 @@ class _MyHomePageState extends State<MyHomePage> {
                   margin: new EdgeInsets.only(
                       top: 25.0
                   ),
-                  height: 0,// todo 150
+                  height: 90,
                   color: Colors.white,
                   child: FlutterLogo(
                     size: 60.0,
                   ),
                 ),
-                Stack
-                  (
-                    children: <Widget>
-                    [
-                      Align(
-                        alignment: Alignment.topRight,
-                        child: Container(
-                          width: 300,
-                          height: 500,
-                          padding: new EdgeInsets.only(
-                              top: 50,
-                              left: 25,
-                              right: 25
-                          ),
-                          margin: EdgeInsets.only(
-                              bottom: 100
-                          ),
-                          decoration: new BoxDecoration(
-                              color: Colors.cyan,
-                              borderRadius: new BorderRadius.only(
-                                topLeft: const Radius.circular(40),
-                                bottomLeft: const Radius.circular(40),
-                              ),
-                              boxShadow: <BoxShadow>[
-                                new BoxShadow(
-                                  color: Colors.black38,
-                                  blurRadius: 40.0,
-                                  offset: new Offset(0.0, 10.0),
+                Align(
+                    alignment: Alignment.topRight,
+                    child: Column(
+                        children: [
+                          Stack(
+                              alignment: Alignment(0, 1.13),
+                              children: [
+                                Container(
+                                  width: 300,
+                                  height: 400,
+                                  padding: new EdgeInsets.only(
+                                      top: 40,
+                                      left: 25,
+                                      right: 25
+                                  ),
+                                  decoration: new BoxDecoration(
+                                      color: Colors.cyan,
+                                      borderRadius: new BorderRadius.only(
+                                        topLeft: const Radius.circular(40),
+                                        bottomLeft: const Radius.circular(40),
+                                      ),
+                                      boxShadow: <BoxShadow>[
+                                        new BoxShadow(
+                                          color: Colors.black38,
+                                          blurRadius: 40.0,
+                                          offset: new Offset(0.0, 10.0),
+                                        ),
+                                      ]
+                                  ),
+                                  child: viewLogin(),
+                                ),
+                                RaisedButton
+                                  (
+                                  onPressed: onLoginClicked,
+                                  child: Text(
+                                    Strings.of(context).login,
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: 16
+                                    ),
+                                  ),
+                                  textColor: Colors.deepPurple,
+                                  color: Colors.white,
+                                  shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                                  padding: EdgeInsets.only(
+                                      left: 52,
+                                      right: 52),
                                 ),
                               ]
-                          ),
-                          child: viewLogin(),
-                        ),
-                      ),
-                      Positioned(
-                          right: 60,
-                          left: 180,
-                          bottom: 76,
-                          child: Container(
-                            child: new RaisedButton
-                              (
-                                onPressed: onLoginClicked,
-                                child: Text(
-                                  Strings.of(context).login,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w900
-                                  ),
-                                ),
-                                textColor: Colors.deepPurple,
-                                color: Colors.white,
-                                shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0))
-                            ),
                           )
-                      )
-                    ]
-                )
+                        ])
+                ),
+
               ],
             )
         )
@@ -117,9 +114,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text(
                 Strings.of(context).login,
                 style: TextStyle(
-                    fontSize: 32.0,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w300,),
+                  fontSize: 32.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300,),
 
               )
           ),
@@ -134,8 +131,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       Text(
                         Strings.of(context).email,
                         style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w300,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w300,
                         ),
                       ),
                       Icon(
@@ -172,7 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
                 margin: EdgeInsets.only(top: 20),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
                         Strings.of(context).password,
