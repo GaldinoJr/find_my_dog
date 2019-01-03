@@ -46,32 +46,56 @@ class _MyHomePageState extends State<MyHomePage> {
                     size: 60.0,
                   ),
                 ),
-                Align(
-                  alignment: Alignment.topRight,
-                  child: Container(
-                    width: 300,
-                    height: 500,
-                    padding: new EdgeInsets.only(
-                        top: 50,
-                        left: 25,
-                        right: 25
-                    ),
-                    decoration: new BoxDecoration(
-                        color: Colors.cyan,
-                        borderRadius: new BorderRadius.only(
-                          topLeft: const Radius.circular(40),
-                          bottomLeft: const Radius.circular(40),
-                        ),
-                        boxShadow: <BoxShadow>[
-                          new BoxShadow(
-                            color: Colors.black38,
-                            blurRadius: 40.0,
-                            offset: new Offset(0.0, 10.0),
+                Stack
+                  (
+                    children: <Widget>
+                    [
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Container(
+                          width: 300,
+                          height: 500,
+                          padding: new EdgeInsets.only(
+                              top: 50,
+                              left: 25,
+                              right: 25
                           ),
-                        ]
-                    ),
-                    child: viewLogin(),
-                  ),
+                          margin: EdgeInsets.only(
+                              bottom: 100
+                          ),
+                          decoration: new BoxDecoration(
+                              color: Colors.cyan,
+                              borderRadius: new BorderRadius.only(
+                                topLeft: const Radius.circular(40),
+                                bottomLeft: const Radius.circular(40),
+                              ),
+                              boxShadow: <BoxShadow>[
+                                new BoxShadow(
+                                  color: Colors.black38,
+                                  blurRadius: 40.0,
+                                  offset: new Offset(0.0, 10.0),
+                                ),
+                              ]
+                          ),
+                          child: viewLogin(),
+                        ),
+                      ),
+                      Positioned(
+                          right: 60,
+                          left: 180,
+                          bottom: 76,
+                          child: Container(
+                              child: new RaisedButton
+                                (
+                                onPressed: onLoginClicked,
+                                child: Text(Strings.of(context).login),
+                                textColor: Colors.deepPurple,
+                                color: Colors.white,
+                                shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0))
+                              ),
+                          )
+                      )
+                    ]
                 )
               ],
             )
@@ -101,8 +125,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text(
                   Strings.of(context).email,
                   style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w300
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300
                   ),
                 )),
           ),
@@ -133,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Text(
                   Strings.of(context).password,
                   style: TextStyle(
-                    color: Colors.white,
+                      color: Colors.white,
                       fontWeight: FontWeight.w300
                   ),
                 )),
@@ -163,5 +187,9 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ]
     );
+  }
+
+  onLoginClicked() {
+
   }
 }
