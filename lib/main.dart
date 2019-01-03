@@ -56,11 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
                               children: [
                                 Container(
                                   width: 300,
-                                  height: 400,
                                   padding: new EdgeInsets.only(
                                       top: 40,
                                       left: 25,
-                                      right: 25
+                                      right: 25,
+                                      bottom: 160
                                   ),
                                   decoration: new BoxDecoration(
                                       color: Colors.cyan,
