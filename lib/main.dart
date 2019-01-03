@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   margin: new EdgeInsets.only(
                       top: 25.0
                   ),
-                  height: 150,
+                  height: 0,// todo 150
                   color: Colors.white,
                   child: FlutterLogo(
                     size: 60.0,
@@ -119,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(
                     fontSize: 32.0,
                     color: Colors.white,
-                    fontWeight: FontWeight.w300),
+                    fontWeight: FontWeight.w300,),
 
               )
           ),
@@ -135,12 +135,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         Strings.of(context).email,
                         style: TextStyle(
                             color: Colors.white,
-                            fontWeight: FontWeight.w300
+                            fontWeight: FontWeight.w300,
                         ),
                       ),
                       Icon(
                         MyCustomIcons.mail,
                         color: Colors.white,
+                        size: 18,
                       )
 
                     ]
@@ -183,6 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Icon(
                         MyCustomIcons.key,
                         color: Colors.white,
+                        size: 18,
                       )
                     ]
                 )
