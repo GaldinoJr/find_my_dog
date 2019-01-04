@@ -16,7 +16,8 @@ class Strings {
       'title': 'Find my dog',
       'email': 'Email',
       'password':'Senha',
-      'login':'Login'
+      'login':'Login',
+      'signUp':'Sign Up'
     }
   };
 
@@ -34,5 +35,9 @@ class Strings {
 
   String get login {
     return _localizedValues[locale.languageCode]['login'];
+  }
+
+  String get signUp {
+    return _localizedValues[locale.languageCode]['signUp'];
   }
 }

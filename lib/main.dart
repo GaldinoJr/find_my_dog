@@ -47,59 +47,107 @@ class _MyHomePageState extends State<MyHomePage> {
                     size: 60.0,
                   ),
                 ),
-                Align(
-                    alignment: Alignment.topRight,
-                    child: Column(
-                        children: [
-                          Stack(
-                              alignment: Alignment(0, 1.13),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: <Widget>[
+                          RaisedButton
+                            (
+                            onPressed: onChangeLoginClicked,
+                            child: Text(
+                              Strings.of(context).login,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 16
+                              ),
+                            ),
+                            textColor: Colors.white,
+                            color: Colors.purple,
+                            shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.only(
+                              topRight: Radius.circular(30),
+                              bottomRight: Radius.circular(30)
+                            )),
+                          ),
+                          RaisedButton
+                            (
+                            onPressed: onChangeSignUpClicked,
+                            child: Text(
+                              Strings.of(context).signUp,
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 16
+                              ),
+                            ),
+                            textColor: Colors.white,
+                            color: Colors.deepPurple,
+                            shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.only(
+                                topRight: Radius.circular(30),
+                                bottomRight: Radius.circular(30)
+                            )),
+                          ),
+                        ],
+                      ),
+//                      Icon(
+//                        MyCustomIcons.left_dir,
+//                        color: Colors.cyan,
+//                        size: 50,
+//                      ),
+                      Align(
+                          alignment: Alignment.topRight,
+                          child: Column(
                               children: [
-                                Container(
-                                  width: 300,
-                                  padding: new EdgeInsets.only(
-                                      top: 40,
-                                      left: 25,
-                                      right: 25,
-                                      bottom: 160
-                                  ),
-                                  decoration: new BoxDecoration(
-                                      color: Colors.cyan,
-                                      borderRadius: new BorderRadius.only(
-                                        topLeft: const Radius.circular(40),
-                                        bottomLeft: const Radius.circular(40),
-                                      ),
-                                      boxShadow: <BoxShadow>[
-                                        new BoxShadow(
-                                          color: Colors.black38,
-                                          blurRadius: 40.0,
-                                          offset: new Offset(0.0, 10.0),
-                                        ),
-                                      ]
-                                  ),
-                                  child: viewLogin(),
-                                ),
-                                RaisedButton
-                                  (
-                                  onPressed: onLoginClicked,
-                                  child: Text(
-                                    Strings.of(context).login,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 16
-                                    ),
-                                  ),
-                                  textColor: Colors.deepPurple,
-                                  color: Colors.white,
-                                  shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
-                                  padding: EdgeInsets.only(
-                                      left: 52,
-                                      right: 52),
-                                ),
-                              ]
-                          )
-                        ])
-                ),
+                                Stack(
+                                    alignment: Alignment(0, 1.13),
+                                    children: [
 
+                                      Container(
+                                        width: 240,
+                                        padding: new EdgeInsets.only(
+                                            top: 40,
+                                            left: 25,
+                                            right: 25,
+                                            bottom: 160
+                                        ),
+                                        decoration: new BoxDecoration(
+                                            color: Colors.cyan,
+                                            borderRadius: new BorderRadius.only(
+                                              topLeft: const Radius.circular(40),
+                                              bottomLeft: const Radius.circular(40),
+                                            ),
+                                            boxShadow: <BoxShadow>[
+                                              new BoxShadow(
+                                                color: Colors.black38,
+                                                blurRadius: 40.0,
+                                                offset: new Offset(0.0, 10.0),
+                                              ),
+                                            ]
+                                        ),
+                                        child: viewLogin(),
+                                      ),
+                                      RaisedButton
+                                        (
+                                        onPressed: onLoginClicked,
+                                        child: Text(
+                                          Strings.of(context).login,
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.w900,
+                                              fontSize: 16
+                                          ),
+                                        ),
+                                        textColor: Colors.deepPurple,
+                                        color: Colors.white,
+                                        shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
+                                        padding: EdgeInsets.only(
+                                            left: 52,
+                                            right: 52),
+                                      ),
+                                    ]
+                                )
+                              ])
+                      ),
+                    ]
+                )
               ],
             )
         )
@@ -216,5 +264,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   onLoginClicked() {
 
+  }
+
+  void onChangeLoginClicked() {
+  }
+
+  void onChangeSignUpClicked() {
   }
 }
