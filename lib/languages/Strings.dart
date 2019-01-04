@@ -17,7 +17,8 @@ class Strings {
       'email': 'Email',
       'password':'Senha',
       'login':'Login',
-      'signUp':'Sign Up'
+      'signUp':'Sign Up',
+      'appName':'Find my pet'
     }
   };
 
@@ -39,5 +40,9 @@ class Strings {
 
   String get signUp {
     return _localizedValues[locale.languageCode]['signUp'];
+  }
+
+  String get appName {
+    return _localizedValues[locale.languageCode]['appName'];
   }
 }

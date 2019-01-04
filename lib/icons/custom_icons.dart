@@ -31,4 +31,5 @@ class MyCustomIcons {
   static const IconData mail = const IconData(0xe800, fontFamily: _kFontFam);
   static const IconData key = const IconData(0xe801, fontFamily: _kFontFam);
   static const IconData left_dir = const IconData(0xe802, fontFamily: _kFontFam);
+  static const IconData dog = const IconData(0xe803, fontFamily: _kFontFam);
 }

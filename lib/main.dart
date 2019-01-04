@@ -37,15 +37,31 @@ class _MyHomePageState extends State<MyHomePage> {
             Column(
               children: [
                 Container(
-                  alignment: Alignment.centerLeft,
-                  margin: new EdgeInsets.only(
-                      top: 25.0
-                  ),
-                  height: 90,
-                  color: Colors.white,
-                  child: FlutterLogo(
-                    size: 60.0,
-                  ),
+                    alignment: Alignment.centerLeft,
+                    margin: new EdgeInsets.only(
+                        top: 40.0,
+                        left: 25
+                    ),
+                    height: 90,
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          MyCustomIcons.dog,
+                          size: 60.0,
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 24),
+                            child:Text(
+                              Strings.of(context).appName,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 32
+                              ),
+                            )
+                        ),
+                      ],
+                    )
+
                 ),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -65,8 +81,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             textColor: Colors.white,
                             color: Colors.purple,
                             shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.only(
-                              topRight: Radius.circular(30),
-                              bottomRight: Radius.circular(30)
+                                topRight: Radius.circular(30),
+                                bottomRight: Radius.circular(30)
                             )),
                           ),
                           RaisedButton
@@ -100,9 +116,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                 Stack(
                                     alignment: Alignment(0, 1.13),
                                     children: [
-
                                       Container(
-                                        width: 240,
+                                        margin: EdgeInsets.only(top: 50),
+                                        width: 260,
                                         padding: new EdgeInsets.only(
                                             top: 40,
                                             left: 25,
